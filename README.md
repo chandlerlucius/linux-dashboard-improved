@@ -71,12 +71,19 @@
 Linux Dashboard is bash script written to get basic server
 analytic data and aggregate it into a json format.
 
-It is encased in a Java wrapper using websockets
+It is encased in a python wrapper using websockets
 to provide the client machine with constantly updating data.
 
 ## Prerequisites
 
-JDK 8+ is needed to build/test/install/deploy the project.
+Python is needed to build/test/install/deploy the project.
+InfluxDB is needed to store data for the project.
+
+```bash
+sudo apt install python3
+sudo apt install influxdb
+sudo apt install python3-influxdb
+```
 
 ## Installation
 
@@ -85,7 +92,7 @@ Install from source
 1.  Clone the repo
 
     ```bash
-    git clone https://github.com/chandlerlucius/linux-dashboard
+    git clone https://github.com/chandlerlucius/linux-dashboard-improved
     ```
 
 2.  Navigate to repo directory
@@ -97,7 +104,7 @@ Install from source
 3.  Build project w/o tests
 
     ```bash
-    ./mvnw clean install -DskipTests
+    python3 
     ```
 
 4.  Navigate to target directory
